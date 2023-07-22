@@ -1,16 +1,4 @@
-import { makeCrudApi } from "@zodios/core";
-import { z, string, object, number } from "zod";
+import { makeCrudApi } from "../utils/makeCrudApi";
+import { User } from "../types/User";
 
-export const User = object({
-  id: string(),
-  firstName: string(),
-  lastName: string().nullish(),
-  email: string(),
-  password: string().optional(),
-  roleId: number(),
-  createdAt: string().datetime(),
-  updatedAt: string().datetime(),
-});
-export type User = z.infer<typeof User>;
-
-export default makeCrudApi("user", User);
+export const userApi = makeCrudApi("user", User);

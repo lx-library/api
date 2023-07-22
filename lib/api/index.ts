@@ -1,6 +1,10 @@
 import { mergeApis } from "@zodios/core";
-import user from "./user";
+import { userApi } from "./user";
+import { slideApi } from "./slide";
+import { studentApi } from "./student";
 
 export default mergeApis({
-  "": user,
+  "/users": userApi,
+  "/slides": slideApi,
+  "/student": studentApi,
 });
