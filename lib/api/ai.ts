@@ -4,7 +4,7 @@
 
 import { makeApi, makeEndpoint } from "@zodios/core";
 import { z, string } from "zod";
-import { errors } from "./errors";
+import { errors } from "./errors.js";
 
 const promptAI = makeEndpoint({
   method: "post",

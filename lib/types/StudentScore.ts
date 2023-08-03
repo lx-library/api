@@ -1,5 +1,5 @@
 import z from "zod";
-import { Score } from "./Score";
+import { Score } from "./Score.js";
 
 export const StudentScore = z.object({
   StudentId: z.string(),

@@ -1,10 +1,10 @@
 import { mergeApis } from "@zodios/core";
-import { aiApi } from "./ai";
-import { userApi } from "./user";
-import { slideApi } from "./slide";
-import { studentApi } from "./student";
+import { aiApi } from "./ai.js";
+import { userApi } from "./user.js";
+import { slideApi } from "./slide.js";
+import { studentApi } from "./student.js";
 
-export default mergeApis({
+export const mainApi = mergeApis({
   "/ai": aiApi,
   "/users": userApi,
   "/slides": slideApi,

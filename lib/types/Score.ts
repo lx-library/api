@@ -1,5 +1,5 @@
 import z from "zod";
-import { makeId } from "../utils/makeId";
+import { makeId } from "../utils/makeId.js";
 
 export const Score = z.object({
   id: z.string().default(() => makeId()),
