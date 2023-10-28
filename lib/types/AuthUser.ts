@@ -8,6 +8,5 @@ export const AuthUser = z.object({
   email: z.string(),
   grade: z.string(),
   roleId: z.number(),
-  courses: z.null(),
 });
 export type AuthUser = z.infer<typeof AuthUser>;
