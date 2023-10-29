@@ -8,14 +8,23 @@
   "private": true,
   "type": "module",
   "exports": {
-    "./*": "./lib/*.ts"
+    ".": "./dist/index.js",
+    "./*": "./dist/*.js"
   },
-  "scripts": {},
+  "files": [
+    "lib",
+    "dist"
+  ],
+  "scripts": {
+    "dist": "rimraf dist && tsc -p lib"
+  },
   "dependencies": {
     "@zodios/core": "^10.9.6",
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@types/node": "^20.8.9"
+    "@types/node": "^20.8.9",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.2.2"
   }
 }
